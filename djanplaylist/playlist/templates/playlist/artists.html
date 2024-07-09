@@ -1,0 +1,20 @@
+{% extends 'playlist/base.html' %}
+
+{% load static %}
+{% block linkCss %}
+<link rel="stylesheet" type="text/css" href="{% static 'playlist/artists.css' %}">
+{% endblock linkCss  %}
+
+{% block title %} DjanPlaylist | Artist {% endblock title%}
+
+{% block content %}
+    <h2>Current Artists included on my Playlist</h2>
+    <div class="container grid-container">
+        {% for artist in artists %}
+        <div class="grid-item">
+            <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
+            <button class="grid-item-button">Check albums and songs</button>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

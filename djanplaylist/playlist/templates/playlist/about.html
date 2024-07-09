@@ -1,0 +1,20 @@
+{% extends "playlist/base.html" %}
+
+{% load static %}
+{% block linkCss %}
+<link rel="stylesheet" href="{% static 'playlist/about.css' %}">
+{% endblock linkCss %}
+
+{% block title %} DjanPlaylist | About {% endblock title%}
+
+{% block content %}
+    <h2>You can find me on</h2>
+    <div>
+        <div>
+            <a href="https://www.linkedin.com/in/davidcinco/" target="_blank">LinkedIn</a>
+        </div>
+        <div>
+            <a href="https://github.com/davidcinco" target="_blank">GitHub</a>
+        </div>
+    </div>
+{% endblock content%}

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "playlist.apps.PlaylistConfig",
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'djanplaylist.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'playlistnet',
+        'NAME': 'djanplaylistdb',
         'USER': "postgres",
         'PASSWORD': "1234",
         'HOST': "localhost",

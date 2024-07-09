@@ -1,0 +1,13 @@
+div.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+div.grid-container div.grid-item{
+    border: 2px solid grey;
+}
+
+div.grid-container div.grid-item h2.grid-item-h2{
+    font-size: 1.85rem;
+    color: white;
+}
