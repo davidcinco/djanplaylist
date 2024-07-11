@@ -1,10 +1,10 @@
 from django.db import models
 
 # Create your models here.
-
 class Artist(models.Model):
     artistid = models.AutoField(primary_key=True)
     artistname = models.CharField(max_length=195)
+    artistpicture = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -15,6 +15,7 @@ class Album(models.Model):
     albumname = models.CharField(max_length=185)
     albumgenre = models.CharField(max_length=185)
     artistfrom = models.ForeignKey('Artist', models.DO_NOTHING, db_column='artistfrom', blank=True, null=True)
+    albumpicture = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -28,4 +29,3 @@ class Song(models.Model):
     class Meta:
         managed = False
         db_table = 'song'
-

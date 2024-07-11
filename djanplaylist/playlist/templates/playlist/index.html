@@ -13,8 +13,16 @@
         {% for artist in artists %}
         <div class="grid-item">
             <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
-            <button class="grid-item-button">Check Albums</button>
+            <img src="{% static '{{ artist.artistpicture }}' %}" alt="{{ artist.artistname }} Picture">
+
+            <a href="{% url 'about' %}">
+                <button class="grid-item-button">Check Albums</button>
+            </a>
         </div>
         {% endfor %}
     </div>
+
+    {% comment %} <img src="{% static 'playlist/artistsPic/gorillaz.webp' %}" alt=". . .">
+    <img src="{% static 'playlist/artistsPic/radiohead.jpg' %}" alt=". . .">
+    <img src="{% static 'playlist/omnm.jpg' %}" alt=". . ."> {% endcomment %}
 {% endblock content %}
