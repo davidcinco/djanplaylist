@@ -8,3 +8,17 @@ div.container {
     display: flex;
     justify-content: space-between;
 }
+
+div.grid-item{
+    display: flex;
+    flex-direction: column;
+}
+
+div.grid-item button.grid-item-button{
+    padding: .50em;
+    font-size: 1.25rem;
+    background-color: #32926F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}

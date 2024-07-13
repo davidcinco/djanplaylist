@@ -14,12 +14,25 @@ def artists(request):
     artist_context = {"artists": artists}
     return render(request, "playlist/artists.html", artist_context)
 
-def artist(request, artistid):
+def artist(request, id):
     try:
-        artist = Artist.objects.get(artistid=artistid)
-        return HttpResponse(artist.artistname)
-    #     # return render(request, "playlist/index.html", context)
-    #     return context
+        artist = Artist.objects.get(artistid=id)
+        albums = Album.objects.filter(artistfrom=id)
+
+        artist_data = {"artist": artist, "albums": albums}
+        return render(request, "playlist/artist.html", artist_data)
+    except Exception as e:
+        return HttpResponse(e)
+    
+def album(request, id):
+    try:
+        album = Album.objects.get(albumid=id)
+        # artist = Artist.objects.get(artistid=album.artistfrom.artistid)
+        songs = Song.objects.filter(albumfrom=id)
+
+        album_data = {"album": album, "songs": songs}
+        return render(request, "playlist/album.html", album_data)
+
     except Exception as e:
         return HttpResponse(e)
     

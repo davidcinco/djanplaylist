@@ -1,0 +1,21 @@
+{% extends "playlist/base.html" %}
+
+{% load static %}
+{% block linkCss %}
+<link rel="stylesheet" href="{% static "playlist/album.css" %} ">
+{% endblock linkCss %}
+
+{% block title %} DjanPlaylist | {{ album.albumname }} {% endblock title %}
+
+{% block content %}
+    <a href="{% url "artist" id=album.artistfrom.artistid %}">
+        <button class="returnArtistBtn">Return to {{album.artistfrom.artistname}} Albums</button>
+    </a>
+
+    <h2 class="album-h2">Songs from <span style="text-shadow: 2px 2px black"> {{ album.albumname }} </span></h2>
+    <div class="album-songs">
+        {% for song  in songs  %}
+            <p>{{ song.songname}}</p>
+        {% endfor %}
+    </div>
+{% endblock content %}

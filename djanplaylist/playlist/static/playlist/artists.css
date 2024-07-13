@@ -4,10 +4,23 @@ div.grid-container{
 }
 
 div.grid-container div.grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid grey;
 }
 
 div.grid-container div.grid-item h2.grid-item-h2{
     font-size: 1.85rem;
+    color: black;
+}
+
+div.grid-container div.grid-item button.grid-item-button{
+    padding: .50em;
+    font-size: 1.25rem;
+    background-color: #32926F;
     color: white;
+    border: none;
+    border-radius: 8px;
 }

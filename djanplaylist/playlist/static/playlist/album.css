@@ -1,0 +1,25 @@
+button.returnArtistBtn{
+    font-size: 1.25rem;
+    margin: 1em 0em;
+    padding: .45em;
+}
+
+h2.album-h2{
+    font-size: 2.25rem;
+    background-color: #0fc88b;
+    color: white;
+}
+
+div.album-songs{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(106, 156, 146);
+    padding: .5em;
+    gap: 5px;
+}
+
+div.album-songs p {
+    font-size: 1.70rem;
+    background-color: rgb(67, 134, 119);
+    color: white;
+}

@@ -15,7 +15,7 @@
             <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
             <img src="{% static '{{ artist.artistpicture }}' %}" alt="{{ artist.artistname }} Picture">
 
-            <a href="{% url 'about' %}">
+            <a href="{% url 'artist' id=artist.artistid %}">
                 <button class="grid-item-button">Check Albums</button>
             </a>
         </div>

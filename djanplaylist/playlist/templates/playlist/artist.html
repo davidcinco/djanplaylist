@@ -1,11 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'playlist/base.html' %}
+
+{% load static %}
+{% block linkCss %}
+<link rel="stylesheet" href="{% static "playlist/artist.css" %}">
+{% endblock %}
+
+{% block title %} DjanPlaylist | Artist {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <a href="{% url "artists" %}">
+            <button class="backArtistBtn">Return to Artists</button>
+        </a>
+
+        <div class="album-current">
+            <img src="{{ artist.artistpicture}}" alt="{{ artist.artistname}} Image">
+            <h2>{{ artist.artistname}}</h2>
+        </div>
+
+        <div class="album-grid">
+            {% for album in albums %}
+            <a class="album-anchor" href="{% url "album" id=album.albumid %}">
+                <div class="album-grid-item">
+                    <img src="" alt="{{ album.albumname }} Album Image">
+                    <h2>{{ album.albumname }}</h2>
+                    <h3>[{{ album.albumgenre }}]</h3>
+                </div>
+            </a>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock content %}
