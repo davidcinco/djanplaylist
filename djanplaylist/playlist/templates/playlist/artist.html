@@ -13,8 +13,8 @@
             <button class="backArtistBtn">Return to Artists</button>
         </a>
 
-        <div class="album-current">
-            <img src="{{ artist.artistpicture}}" alt="{{ artist.artistname}} Image">
+        <div class="artist-current">
+            <img src="{% static artist.artistpicture %}" alt="{{ artist.artistname}} Image" class="artist-current-picture">
             <h2>{{ artist.artistname}}</h2>
         </div>
 
@@ -22,7 +22,7 @@
             {% for album in albums %}
             <a class="album-anchor" href="{% url "album" id=album.albumid %}">
                 <div class="album-grid-item">
-                    <img src="" alt="{{ album.albumname }} Album Image">
+                    <img src="{% static album.albumpicture %}" alt="{{ album.albumname }} Album Image" class="album-cover">
                     <h2>{{ album.albumname }}</h2>
                     <h3>[{{ album.albumgenre }}]</h3>
                 </div>

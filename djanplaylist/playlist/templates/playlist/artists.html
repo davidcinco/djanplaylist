@@ -13,7 +13,7 @@
         {% for artist in artists %}
         <div class="grid-item">
             <div>
-                <img src="" alt="{{ artist.artistname}} Image">                
+                <img src="{% static artist.artistpicture %}" alt="{{ artist.artistname}} Image" class="grid-item-img-artist">                
                 <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
             </div>
 

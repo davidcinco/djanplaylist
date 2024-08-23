@@ -14,7 +14,6 @@ class AuthGroup(models.Model):
         managed = False
         db_table = 'auth_group'
 
-
 class AuthGroupPermissions(models.Model):
     id = models.BigAutoField(primary_key=True)
     group = models.ForeignKey(AuthGroup, models.DO_NOTHING)

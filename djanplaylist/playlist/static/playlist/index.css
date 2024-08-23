@@ -14,6 +14,11 @@ div.grid-item{
     flex-direction: column;
 }
 
+div.grid-item img {
+    width: 300px;
+    height: 300px;
+}
+
 div.grid-item button.grid-item-button{
     padding: .50em;
     font-size: 1.25rem;

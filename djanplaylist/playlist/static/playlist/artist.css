@@ -1,16 +1,26 @@
-div.album-current{
+
+/* CURRENT ARTIST SECTION */
+div.artist-current{
     display: flex;
     justify-content: left;
     align-items: center;
     background-color: #0fc88b;
 }
-div.album-current h2{
+div.artist-current h2{
     padding: 0em 1.25em;
-    font-size: 2.75rem;
+    font-size: 4.25rem;
     color: white;
     text-shadow: 2px 2px 2px black;
 }
 
+div.artist-current img.artist-current-picture {
+    width: 300px;
+    height: 300px;
+    border: 4px solid rgb(140, 140, 140);
+    border-radius: 4px;
+}
+
+/* ALBUMS    */
 div.album-grid{
     padding: 1.45em;
     display: grid;
@@ -20,8 +30,18 @@ div.album-grid{
 }
 
 div.album-grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #32926f34;
     border-radius: 3px;
+    padding: .75em;
+}
+
+div.album-grid-item img.album-cover{
+    width: 250px;
+    height: 250px;
 }
 
 a.album-anchor{
