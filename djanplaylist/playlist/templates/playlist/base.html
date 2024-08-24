@@ -16,13 +16,25 @@
 </head>
 <body>
     <nav class="nav navbar nav-base">
-        <h1 class="nav-title">DjanPlaylist</h1>
+        <h1 class="nav-title"><a href="/playlist/">DjanPlaylist</a></h1>
         <ul class="nav-ul">
             <li class="nav-li li-home"><a class="nav-a" href="/playlist/">Home</a></li>
             <li class="nav-li li-artists"><a class="nav-a" href="/playlist/artists">Artists</a></li>
             <li class="nav-li li-about"><a class="nav-a" href="/playlist/about">About</a></li>
         </ul>
+        
+        <button class="nav-menu-button" id="menu-mobile"> + </button>
+
+
     </nav>
+    <div class="nav-mobile" id="nav-mobile">
+        <ul class="nav-mobile-ul">
+            <li class="nav-mobile-li"><a href="/playlist/" class="nav-mobile-a">Home</a></li>
+            <li class="nav-mobile-li"><a href="/playlist/artists" class="nav-mobile-a">Artists</a></li>
+            <li class="nav-mobile-li"><a href="/playlist/about" class="nav-mobile-a">About</a></li>
+        </ul>
+    </div>
+
     <main class="content">
         {% block content %}{% endblock content %}
     </main>
@@ -31,5 +43,7 @@
         <p>Author: <a href="https://www.linkedin.com/in/davidcinco/" target="_blank">David Cinco</a></p>
         <p>cincoisc@gmail.com</p>
     </footer>
+
+    <script src="{% static 'playlist/js/base.js' %}"></script>
 </body>
 </html>

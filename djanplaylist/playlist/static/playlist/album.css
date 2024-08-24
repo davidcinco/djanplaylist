@@ -28,3 +28,17 @@ div.album-songs p {
     font-weight: bold;
 
 }
+
+@media screen and (max-width: 725px) {
+    
+    div.album-songs{
+        grid-template-columns:  auto auto;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    
+    div.album-songs{
+        grid-template-columns:  auto;
+    }
+}

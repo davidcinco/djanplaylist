@@ -40,5 +40,43 @@ a.a-social-media-linkedin{
 
 a.a-social-media-github{
     background-color: rgb(35, 35, 35);
+}   
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 875px){
+    a.a-social-media-item {
+        min-width: 150px;
+    }
 }
 
+@media screen and (max-width: 745px){
+    a.a-social-media-item {
+        min-width: 120px;
+    }
+}
+
+@media screen and (max-width: 675px){
+    a.a-social-media-item {
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    div.div-social-media{
+        flex-direction: column;
+    }
+
+    a.a-social-media-item {
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    a.a-social-media-item {
+        min-width: 90px;
+        height: 110px;
+        justify-content: center;
+        font-size: 1.85rem;
+    }
+
+}

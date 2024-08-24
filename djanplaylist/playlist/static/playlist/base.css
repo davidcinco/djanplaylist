@@ -4,6 +4,14 @@
     font-family: "Roboto", sans-serif;;
 }
 
+a {
+    text-decoration: none;
+}
+
+h1.nav-title a:visited {
+    color: white;
+}
+
 nav.navbar {
     padding: 1em 1em;
     display: flex;
@@ -12,15 +20,42 @@ nav.navbar {
     background-color: #32926F;
 }
 
+div.nav-mobile {
+    display: none;
+    background-color: #32926F;
+}
+div.nav-mobile ul{
+    display: flex;
+    flex-direction: column;
+}
+
+div.nav-mobile ul li {
+    list-style-type: none;
+}
+div.nav-mobile ul li a {
+    padding: 0em .75em;
+    color: white;
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+button.nav-menu-button {
+    width: 60px;
+    display: none;
+    font-size: 3.25rem;
+    border: none;
+    border-radius: 4px;
+}
+
 h1.nav-title {
     color: white;
     font-size: 2.25rem;
 }
 
 ul.nav-ul {
+    display: block;
     list-style: none;
     overflow: hidden;
-
 }
 
 li.nav-li {
@@ -46,4 +81,26 @@ footer {
 }
 footer p {
     padding: .25rem;
+}
+
+
+@media screen and (max-width: 1365px) {
+
+    div.nav-mobile {
+        display: none;
+    }
+
+    button.nav-menu-button { 
+        display: block;
+    }
+
+    ul.nav-ul{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    div.nav-mobile {
+        display: none;
+    }
 }

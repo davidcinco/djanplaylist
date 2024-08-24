@@ -28,6 +28,7 @@ div.grid-container div.grid-item div {
 }
 
 div.grid-container div.grid-item img.grid-item-img-artist{
+    width: 100%;
     height: 350px;
 }
 
@@ -64,5 +65,17 @@ div.grid-container div.grid-item button.grid-item-button{
     div.container {
         grid-template-columns: auto;
         gap: 40px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    div.grid-container div.grid-item img.grid-item-img-artist{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    div.grid-container div.grid-item img.grid-item-img-artist{
+        height: 200px;
     }
 }

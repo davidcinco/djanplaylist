@@ -61,16 +61,23 @@ button.backArtistBtn{
 
 
 /* QUERIES */
-@media screen and (max-width: 1376px) {
-    div.container {
+@media screen and (max-width: 975px) {
+    div.artist-current {
+    }
+
+    div.album-grid{
         grid-template-columns: auto auto;
-        gap: 40px;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    div.container {
+@media screen and (max-width: 800px) {
+    div.artist-current {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    div.album-grid{
         grid-template-columns: auto;
-        gap: 40px;
     }
 }
