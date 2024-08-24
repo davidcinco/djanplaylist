@@ -9,12 +9,15 @@
 
 {% block content %}
     <h2 class="h2-title">Take a look to these artists</h2>
+    
     <div class="container">
         {% for artist in artists %}
         <div class="grid-item">
-            <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
-            <img src="{% static artist.artistpicture %}" alt="{{ artist.artistname }} Picture">
-
+            <div>
+                <img src="{% static artist.artistpicture %}" alt="{{ artist.artistname }} Picture">
+                <h2 class="grid-item-h2">{{ artist.artistname }}</h2>
+            </div>
+            
             <a href="{% url 'artist' id=artist.artistid %}">
                 <button class="grid-item-button">Check Albums</button>
             </a>

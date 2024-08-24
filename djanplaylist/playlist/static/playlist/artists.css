@@ -1,3 +1,11 @@
+h2.h2-artists-title {
+    padding: .75em 0em;
+    font-size: 2.25rem;
+    letter-spacing: 2.25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
 div.grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -20,7 +28,6 @@ div.grid-container div.grid-item div {
 }
 
 div.grid-container div.grid-item img.grid-item-img-artist{
-    width: 350px;
     height: 350px;
 }
 
@@ -30,11 +37,32 @@ div.grid-container div.grid-item h2.grid-item-h2{
     text-align: center;
 }
 
+div.grid-container div.grid-item a {
+    width: 100%;
+}
 div.grid-container div.grid-item button.grid-item-button{
     padding: .70em;
+    width: inherit;
     font-size: 1.50rem;
     background-color: #32926F;
     color: white;
     border: none;
     border-radius: 8px;
+}
+
+
+/* QUERIES */
+
+@media screen and (max-width: 1376px) {
+    div.container {
+        grid-template-columns: auto auto;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    div.container {
+        grid-template-columns: auto;
+        gap: 40px;
+    }
 }

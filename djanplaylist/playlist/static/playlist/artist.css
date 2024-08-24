@@ -58,3 +58,19 @@ button.backArtistBtn{
     margin: 1em 0em;
     padding: .45em;
 }
+
+
+/* QUERIES */
+@media screen and (max-width: 1376px) {
+    div.container {
+        grid-template-columns: auto auto;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    div.container {
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+}

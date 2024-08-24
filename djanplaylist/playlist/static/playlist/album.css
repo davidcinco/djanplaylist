@@ -5,6 +5,7 @@ button.returnArtistBtn{
 }
 
 h2.album-h2{
+    padding: .25em;
     font-size: 2.25rem;
     background-color: #0fc88b;
     color: white;
@@ -19,7 +20,11 @@ div.album-songs{
 }
 
 div.album-songs p {
-    font-size: 1.70rem;
+    padding: .20em;
+    font-size: 2.15rem;
     background-color: rgb(67, 134, 119);
+    text-shadow: 3px 3px rgb(0, 0, 0);
     color: white;
+    font-weight: bold;
+
 }
